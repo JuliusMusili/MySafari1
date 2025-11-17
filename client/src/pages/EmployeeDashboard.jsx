@@ -37,12 +37,12 @@ export default function EmployeeDashboard(){
 
       <div className="grid md:grid-cols-2 gap-6">
         <div className="bg-white p-6 rounded shadow">
-          <h2 className="font-semibold mb-4">Book a Ride</h2>
+          <h3 className="font-semibold mb-4">Book a Ride</h3>
           <BookingForm onSuccess={fetchBookings} />
         </div>
 
         <div className="bg-white p-6 rounded shadow">
-          <h2 className="font-semibold mb-4">Your Bookings</h2>
+          <h3 className="font-semibold mb-4">Your Bookings</h3>
           <BookingList bookings={bookings} refresh={fetchBookings} />
         </div>
       </div>

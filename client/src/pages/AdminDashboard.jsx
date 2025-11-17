@@ -75,7 +75,7 @@ export default function AdminDashboard(){
       <div className="grid md:grid-cols-2 gap-6">
         <div className="bg-white p-6 rounded shadow">
           <div className="flex justify-between mb-4">
-            <h2 className="font-semibold">Bookings</h2>
+            <h3 className="font-semibold">Bookings</h3>
             <button onClick={exportCSV} className="px-3 py-1 border rounded">Export CSV</button>
           </div>
           <ul className="space-y-3 max-h-[60vh] overflow-auto">
@@ -99,7 +99,7 @@ export default function AdminDashboard(){
         </div>
 
         <div className="bg-white p-6 rounded shadow">
-          <h2 className="font-semibold mb-4">Assign Driver</h2>
+          <div className="font-semibold mb-4">Assign Driver</div>
           {selectedBooking ? (
             <>
               <div className="mb-2">Booking for: <strong>{selectedBooking.user?.name}</strong> — {selectedBooking.route?.name}</div>
@@ -116,7 +116,7 @@ export default function AdminDashboard(){
           )}
 
           <div className="mt-6">
-            <h3 className="font-semibold mb-2">Usage by route</h3>
+            <div className="font-semibold mb-2">Usage by route</div>
             <ReportsChart data={analytics?.byRoute || []} />
           </div>
         </div>
