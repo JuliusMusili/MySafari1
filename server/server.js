@@ -16,7 +16,7 @@ app.get('/', (req, res) => res.send('MySafari API running'));
 // routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/routes', require('./routes/routes'));
-app.use('/api/bookings', require('./routes/bookings'));
+app.use('/api/bookings', require('./routes/booking'));
 app.use('/api/admin', require('./routes/admin'));
 
 const PORT = process.env.PORT || 5000;

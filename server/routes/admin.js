@@ -6,7 +6,7 @@ const Vehicle = require('../models/Vehicle');
 const User = require('../models/User');
 const auth = require('../middleware/auth');
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
-const { sendEmail, sendSms } = require('../utils/notifications');
+const { sendEmail, sendSms } = require('../utils/notification');
 
 // list all bookings (admin)
 router.get('/bookings', auth('admin'), async (req, res) => {

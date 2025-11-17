@@ -3,7 +3,7 @@ const router = express.Router();
 const Booking = require('../models/Booking');
 const Route = require('../models/Route');
 const auth = require('../middleware/auth');
-const { sendEmail, sendSms } = require('../utils/notifications');
+const { sendEmail, sendSms } = require('../utils/notification');
 
 // Create booking (employee)
 router.post('/', auth('employee'), async (req, res) => {
